@@ -1,0 +1,18 @@
+{
+  "name": "ZukkyunFavicon",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "icons": {
+        "16": "icons/ZukkyunFavicon.png",         // 16×16[px]アイコンファイルのパス
+        "48": "icons/ZukkyunFavicon.png",         // 48×48[px]アイコンファイルのパス
+        "128": "icons/ZukkyunFavicon.png"         // 128×128[px]アイコンファイルのパス
+    },
+  "description": "FaviconをGoogleの検索結果に挿入する拡張。",
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.co.jp/*"],
+      "js": ["script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
